@@ -1,3 +1,22 @@
+--.schema songs
+CREATE TABLE songs (
+    id INTEGER,
+    name TEXT,
+    artist_id INTEGER,
+    danceability REAL,
+    energy REAL,
+    key INTEGER,
+    loudness REAL,
+    speechiness REAL,
+    valence REAL,
+    tempo REAL,
+    duration_ms INTEGER
+);
+CREATE TABLE artists (
+    id INTEGER,
+    name TEXT
+);
+
 -- Songs
 -- 1.
 SELECT name
@@ -57,6 +76,37 @@ SELECT name
 FROM songs
 WHERE name LIKE '%feat.%';
 
+-- .schema movies
+CREATE TABLE directors (
+    movie_id INTEGER NOT NULL,
+    person_id INTEGER NOT NULL,
+    FOREIGN KEY(movie_id) REFERENCES movies(id),
+    FOREIGN KEY(person_id) REFERENCES people(id)
+);
+CREATE TABLE movies (
+    id INTEGER,
+    title TEXT NOT NULL,
+    year NUMERIC,
+    PRIMARY KEY(id)
+);
+CREATE TABLE people (
+    id INTEGER,
+    name TEXT NOT NULL,
+    birth NUMERIC,
+    PRIMARY KEY(id)
+);
+CREATE TABLE ratings (
+    movie_id INTEGER NOT NULL,
+    rating REAL NOT NULL,
+    votes INTEGER NOT NULL,
+    FOREIGN KEY(movie_id) REFERENCES movies(id)
+);
+CREATE TABLE stars (
+    movie_id INTEGER NOT NULL,
+    person_id INTEGER NOT NULL,
+    FOREIGN KEY(movie_id) REFERENCES movies(id),
+    FOREIGN KEY(person_id) REFERENCES people(id)
+);
 
 -- Movies
 --1
