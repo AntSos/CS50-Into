@@ -1,0 +1,43 @@
+#name {
+    font-family: monospace;
+    font-size: 50px;
+    text-emphasis: underline;
+    color: red;
+    opacity: 0.5;
+
+}
+
+.about {
+    font-family: cursive;
+    font-size: 30px;
+    text-emphasis: underline;
+    color: black;
+    opacity: 0.5;
+
+
+}
+
+li {
+
+    font-family: cursive;
+    font-size: 15px;
+    text-emphasis: underline;
+    opacity: 0.5;
+    color: magenta;
+}
+
+h4{
+    font-family: cursive;
+    font-size: 15px;
+    text-emphasis: underline;
+    opacity: 0.5;
+    color: blue;
+}
+
+h3 {
+    font-family: cursive;
+    font-size: 15px;
+    text-emphasis: underline;
+    opacity: 0.5;
+    color: orange;
+}
